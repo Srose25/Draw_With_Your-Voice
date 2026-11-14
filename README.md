@@ -24,11 +24,11 @@ Create the virtual environment:
 py -3.12 -m venv .venv
 ```
 
-Install pygame into the virtual environment:
+Install the pinned project dependencies into the virtual environment:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install pygame==2.6.1
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
 ## Run the program
@@ -36,7 +36,7 @@ Install pygame into the virtual environment:
 The virtual environment does not need to be activated. Run the current entry point directly:
 
 ```powershell
-.\.venv\Scripts\python.exe hello_world.py
+.\.venv\Scripts\python.exe main.py
 ```
 
 Alternatively, activate the environment first:
@@ -44,7 +44,7 @@ Alternatively, activate the environment first:
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
-python hello_world.py
+python main.py
 ```
 
 The execution-policy command only affects the current PowerShell window.
@@ -57,7 +57,7 @@ The execution-policy command only affects the current PowerShell window.
 
 ## Project files
 
-- `hello_world.py` - current Python entry point.
-- `idea.md` - project concept and development notes.
+- `main.py` - current Python entry point and Pygame application.
+- `docs/project_plan.md` - project behavior and development plan.
 - `.venv` - local virtual environment; it should not be committed to source control.
 
